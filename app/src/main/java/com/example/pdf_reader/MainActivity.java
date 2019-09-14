@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -127,12 +128,12 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
 
-        return super.onKeyDown(keyCode, event);
+        return true; // super.onKeyDown(keyCode, event);
     }
 
-    @Override
-    public void onAttachedToWindow() {
-//        this.getWindow().setType(WindowManager.LayoutParams.TYPE_KEYGUARD_DIALOG);
-        super.onAttachedToWindow();
-    }
+//    @Override
+//    public void onBackPressed() {
+//        Toast.makeText(this, "BACK 2 button clicked", Toast.LENGTH_LONG).show();
+//    }
+
 }
