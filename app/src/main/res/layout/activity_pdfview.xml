@@ -4,14 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".PDFViewerActivity">
 
-    <ListView
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/pdfView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/pdf_file_list_lv"
-        android:divider="#efefef"
-        android:dividerHeight="5dp">
-    </ListView>
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"/>
 
 </LinearLayout>

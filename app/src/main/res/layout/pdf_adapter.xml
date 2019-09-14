@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/pdf_icon"
+        android:scaleType="fitXY"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/pdf_icon"
+        android:contentDescription="icon for PDF file"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pdf_file_name_tv"
+        android:text="File Name"
+        android:layout_toEndOf="@id/pdf_icon"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:layout_marginStart="10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingEnd="10dp"
+        android:paddingStart="5dp"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        tools:ignore="HardcodedText"/>
+
+</RelativeLayout>
