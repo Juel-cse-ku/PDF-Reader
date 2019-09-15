@@ -106,34 +106,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-
-        switch (keyCode) {
-            case KeyEvent.KEYCODE_VOLUME_UP:
-                Toast.makeText(this, "Volume UP clicked", Toast.LENGTH_LONG).show();
-                break;
-            case KeyEvent.KEYCODE_VOLUME_DOWN:
-                Toast.makeText(this, "Volume DOWN clicked", Toast.LENGTH_LONG).show();
-                break;
-            case KeyEvent.KEYCODE_HOME:
-                Toast.makeText(this, "HOME button clicked", Toast.LENGTH_LONG).show();
-                break;
-            case KeyEvent.KEYCODE_MENU:
-                Toast.makeText(this, "MENU button clicked", Toast.LENGTH_LONG).show();
-                break;
-            case KeyEvent.KEYCODE_BACK:
-                Toast.makeText(this, "BACK button clicked", Toast.LENGTH_LONG).show();
-                break;
-            case KeyEvent.KEYCODE_POWER:
-                Toast.makeText(this, "POWER button clicked", Toast.LENGTH_LONG).show();
-                break;
-        }
-
+        finish();
         return true; // super.onKeyDown(keyCode, event);
     }
-
-//    @Override
-//    public void onBackPressed() {
-//        Toast.makeText(this, "BACK 2 button clicked", Toast.LENGTH_LONG).show();
-//    }
 
 }
