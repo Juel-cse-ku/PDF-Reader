@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -27,6 +28,9 @@ public static final String API_URL = "https://gahp.net/wp-content/uploads/2017/0
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pdfview);
 
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE,
+                WindowManager.LayoutParams.FLAG_SECURE);
+
         pdfView = findViewById(R.id.pdfView);
         fileDownloadingPB = findViewById(R.id.file_downloading_pb);
 
@@ -41,18 +45,18 @@ public static final String API_URL = "https://gahp.net/wp-content/uploads/2017/0
                         File fileToRead = response.getBody();
 
                         pdfView.fromFile(fileToRead)
-                                .enableSwipe(true)
-                                .enableAnnotationRendering(true)
-                                .enableDoubletap(true)
-                                .scrollHandle(new DefaultScrollHandle(PDFViewerActivity.this))
-                                .onRender(new OnRenderListener() {
-                                    @Override
-                                    public void onInitiallyRendered(int nbPages, float pageWidth, float pageHeight) {
-                                        pdfView.fitToWidth();
-                                    }
-                                })
-                                .invalidPageColor(Color.WHITE)
-                                .load();
+                            .enableSwipe(true)
+                            .enableAnnotationRendering(true)
+                            .enableDoubletap(true)
+                            .scrollHandle(new DefaultScrollHandle(PDFViewerActivity.this))
+                            .onRender(new OnRenderListener() {
+                                @Override
+                                public void onInitiallyRendered(int nbPages, float pageWidth, float pageHeight) {
+                                    pdfView.fitToWidth();
+                                }
+                            })
+                            .invalidPageColor(Color.WHITE)
+                            .load();
 
                     }
 
