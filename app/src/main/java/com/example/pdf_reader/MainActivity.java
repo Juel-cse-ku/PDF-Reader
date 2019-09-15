@@ -32,19 +32,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         pdf_file_list_view = findViewById(R.id.pdf_file_list_lv);
-        dir = new File(Environment.getExternalStorageDirectory().toString());
+        Intent intent = new Intent(MainActivity.this, PDFViewerActivity.class);
+        startActivity(intent);
 
-        permission_fn();
-
-        pdf_file_list_view.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(getApplicationContext(), PDFViewerActivity.class);
-                intent.putExtra("position", position);
-
-                startActivity(intent);
-            }
-        });
+//        permission_fn();
+//
+//        pdf_file_list_view.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                Intent intent = new Intent(getApplicationContext(), PDFViewerActivity.class);
+//                intent.putExtra("position", position);
+//
+//                startActivity(intent);
+//            }
+//        });
     }
 
     private void permission_fn() {

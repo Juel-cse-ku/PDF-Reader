@@ -27,6 +27,8 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
-    // pdf reader library.
-    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'   // pdf viewer library.
+    implementation 'com.github.kk121:File-Loader:1.2'               // internet file loader library.
+    implementation 'com.karumi:dexter:5.0.0'                        // request runtime permission checker library.
 }
